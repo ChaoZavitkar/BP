@@ -1,0 +1,79 @@
+\documentclass[a4paper]{article}
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper,margin=3cm]{geometry} % širší okraje
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{parskip} % místo odstavcových zarážek mezery
+\setstretch{1.3} % řádkování
+
+\begin{document}
+
+\noindent\textbf{Vedoucí práce:} Ing. Pavel Kuba, Ph.D.
+
+\noindent\textbf{Studijní program:} Aplikovaná informatika (Bc.)
+
+\section*{Název tématu v češtině}
+Vylepšení bezpečnosti a správy uživatelských účtů na základní škole pomocí Azure Active Directory a Microsoft 365
+
+\section*{Název tématu v angličtině}
+Improving Security and User Account Management at an Elementary School Using Azure Active Directory and Microsoft 365
+
+\section*{Anotace tématu}
+Zvyšující se digitalizace škol přináší nové požadavky na ochranu dat, správu identit a zajištění bezpečného online prostředí pro žáky i učitele. Na mnoha školách se dosud používají sdílené lokální účty, což komplikuje dohledatelnost uživatelů a zvyšuje riziko narušení bezpečnosti i porušení legislativy o ochraně osobních údajů (GDPR).\\
+Hlavním cílem práce je navrhnout a ověřit postup přechodu ze sdíleného lokálního účtu na individuální školní účty spravované v Azure Active Directory (Microsoft Entra ID) s napojením na Microsoft 365 (A3) a nasazením klíčových bezpečnostních politik. 
+
+\noindent Dílčí cíle jsou:
+\begin{enumerate}
+\item navrhnout strukturu identit a rolí (učitel, žák, správce) a standard pojmenování skupin (tříd)
+\item nasadit bezpečnostní opatření: MFA pro učitele a administrátory, politiky hesel, podmíněný přístup
+\item zavést správu zařízení pomocí Microsoft Intune (Endpoint Manager) včetně vzdálené správy zapůjčených notebooků
+\item vypracovat implementační plán (pilot, rollout, školení) a metodu vyhodnocení přínosů (bezpečnost, správa, uživatelská zkušenost)
+\end{enumerate}
+
+\noindent\textbf{Výstupy práce}
+\begin{enumerate}
+\item architekturní návrh správy identit a přístupů v prostředí základní školy (Azure AD + Microsoft 365)
+\item konfigurační dokumentace: nastavení MFA, podmíněného přístupu, základních bezpečnostních politik, Intune profilů a přiřazení
+\item metodika připojení počítačů do Azure AD a postup pro zapůjčená zařízení (domácí použití), včetně scénářů ztráty/krádeže
+\item implementační plán s časovou osou a checklisty; protokol pilotního nasazení a vyhodnocení přínosů a rizik
+\end{enumerate}
+
+\section*{Osnova práce}
+
+\subsection*{Teoretická část}
+\begin{enumerate}
+\item specifika školního IT prostředí a požadavky na kybernetickou bezpečnost (GDPR, ochrana osobních údajů, etika a odpovědnost správců)
+\item architektura Microsoft 365 pro vzdělávání a Azure Active Directory (Microsoft Entra ID) – pojmy, role, skupiny, SSO
+\item bezpečnostní politiky v cloudu: MFA, politiky hesel, podmíněný přístup, základní principy správy zařízení (MDM/MAM)
+\item Microsoft Intune (Endpoint Manager): možnosti, profily konfigurace, compliance, životní cyklus zařízení
+\item právní, etické, licenční a ekonomické aspekty nasazení cloudových služeb ve školách (GDPR, souhlasy, náklady, provozní udržitelnost)
+\end{enumerate}
+
+\subsection*{Praktická část}
+\begin{enumerate}
+\item analýza současného stavu školy: účty (sdílený lokální účet), služby M365, role a omezení
+\item návrh řešení: struktura účtů a skupin (tříd), standard pojmenování, role a oprávnění v M365/Entra ID
+\item implementace bezpečnostních opatření: MFA pro učitele a administrátory, politiky hesel, podmíněný přístup
+\item správa zařízení přes Intune: registrace zařízení, profily konfigurace, aktualizace, compliance, vzdálené akce
+\item scénář „zapůjčený notebook domů“: proces předání, první přihlášení, aplikované politiky, řešení incidentů (ztráta/krádež, wipe)
+\item nasazení a testování: pilot (vybraná třída/učebna), metriky úspěchu, sběr zpětné vazby, vyhodnocení přínosů a rizik
+\end{enumerate}
+
+\section*{Literatura}
+AFCEA; Národní úřad pro kybernetickou a informační bezpečnost (NÚKIB); Národní agentura pro komunikační a informační technologie (NAKIT). \textit{Bezpečná digitální infrastruktura školy} [online]. Ministerstvo školství, mládeže a tělovýchovy, 2024 [cit. 2025-10-27]. Dostupné z: \url{https://www.edu.cz/wp-content/uploads/2024/03/II_c_Bezpecna-digitalni-infrastruktura-skoly_2.k_gr-2.pdf}
+
+\vspace{0.5em}
+ČESKÁ REPUBLIKA. ÚŘAD VLÁDY ČESKÉ REPUBLIKY. \textit{Cesta k Evropské digitální dekádě: strategický plán digitalizace Česka do roku 2030} [online]. Úřad vlády ČR, 2023 [cit. 2025-10-27]. Dostupné z: \url{https://digitalnicesko.gov.cz/media/files/Cesta_k_Evropské_digitální_dekádě_strategický_plán_digitalizace_Česka_do_roku_2030_2icFk2m.pdf}
+
+\vspace{0.5em}
+MICROSOFT. \textit{Microsoft Entra ID (Azure Active Directory) documentation} [online]. Microsoft Corporation, 2024 [cit. 2025-10-14]. Dostupné z: \url{https://learn.microsoft.com/entra/}
+
+\vspace{0.5em}
+MICROSOFT. \textit{Microsoft Intune documentation} [online]. Microsoft Corporation, 2024 [cit. 2025-10-14]. Dostupné z: \url{https://learn.microsoft.com/intune/}
+
+\vspace{0.5em}
+MICROSOFT. \textit{Microsoft 365 Education Deployment Guide} [online]. Microsoft Corporation, 2024 [cit. 2025-10-14]. Dostupné z: \url{https://learn.microsoft.com/microsoft-365/education/}
+
+\end{document}
