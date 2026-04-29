@@ -20,7 +20,7 @@ Součástí práce je analýza současného stavu, architekturní návrh řešen
 
 | Soubor | Popis |
 |--------|-------|
-| `ki-thesis.tex` | Zdrojový kód práce v LaTeXu |
+| `main_text.tex` | Zdrojový kód práce v LaTeXu |
 | `thesis.bib` | Bibliografická databáze |
 | `kitheses.cls` | Třída dokumentu (UJEP) |
 | `LOGO_PRF_CZ_RGB_standard.jpg` | Logo fakulty |
